@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('back1.gif'); /* Replace 'back1.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row; /* Change flex direction to column */
+    justify-content: space-between; /* Align items with space between */
+    align-items: stretch;
+    height: 100vh;
+  }
+  
+  .chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(36, 59, 93, 0.8); /* Set the background color with opacity */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 10px;
+    animation: slideIn 0.5s ease; /* Add animation */
+  }
+  
+  /* Define the animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .chat-container #chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #3dadd2;
+    font-size: 24px;
+  }
+  
+  .user-message {
+    color: blue; /* Color for user messages */
+    margin-bottom: 10px; /* Space between user messages */
+  }
+  
+  .bot-message {
+    color: green; /* Color for bot messages */
+    margin-bottom: 10px; /* Space between bot messages */
+  }
+  
+
+  .chat-container #message-input {
+    width: calc(100% - 80px);
+    padding: 10px;
+    margin-inline: 10px;
+    border: none;
+    border-radius: 5px;
+    animation: slideIn 0.5s ease; /* Add animation */
+  }
+  
+  /* Define the animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .chat-container button {
+    width: 70px;
+    padding: 10px;
+    margin: 10px auto 0; /* Center button horizontally below text input */
+    background-color: #4CAF50; /* Set button background color */
+    color: rgb(255, 255, 255); /* Set button text color */
+    border: none;
+    border-radius: 20px; /* Make the button round */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add transition for smoother animation */
+  }
+  
+  .chat-container button:hover {
+    background-color: #45a049; /* Change button color on hover */
+    transform: scale(1.4); /* Scale the button slightly on hover */
+  }
+  
+  .media-container {
+    flex: 1;
+    padding: 100px;
+    border: 1px solid #298cc5;
+  }
+  
+  #media-viewer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  
+  .upload-label {
+    padding: 10px;
+    background-color: #4CAF50; /* Same color as send button */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+  
+  /* Position the upload button */
+  .upload-label {
+    position: absolute;
+    bottom: 30px; /* Adjust vertical position */
+    left: calc(90% + 10px); /* Position relative to the chat input */
+  }
+  
+  /* Additional styles for media viewer */
+  #media-viewer img,
+  #media-viewer video,
+  #media-viewer audio,
+  #media-viewer iframe {
+    justify-content: center;
+    max-width: 100%;
+    max-height: 400px;
+  }

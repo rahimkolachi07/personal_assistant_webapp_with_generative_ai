@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('icons/back1.jpg');
+  background-size: cover;
+  z-index: -1; /* Ensure background is behind other content */
+}
+
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cluster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1px;
+}
+
+.user-icon {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 50%;
+  background-color: #ffcc00;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: transform 0.9s ease;
+  background-size: cover; /* Added to make the background image fit */
+}
+
+.transparent-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgb(219, 8, 8); /* Adjust text color if needed */
+  font-size: x-large; /* Inherit font size from parent */
+  position: relative;
+  top: 1px; /* Adjust the value to position the input below the center of the icon */
+  text-align: center; /* Center the text horizontally */
+  width: 100%; /* Make the input width match the container width */
+}
+
+
+.user-icon:hover {
+  transform: scale(1.5);
+}
+
+.gif {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 100;
+}

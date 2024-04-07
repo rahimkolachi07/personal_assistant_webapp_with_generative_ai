@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head title="User2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot and Media Viewer</title>
+  <link rel="stylesheet" href="pstyle.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Chatbot -->
+    <div class="chat-container">
+      <div id="chat-window"></div>
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <input type="file" id="file-input" accept="image/*, video/*, audio/*, application/pdf, application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint" style="display: none;">
+      <button onclick="sendMessage()">Send</button>
+      <button onclick="document.getElementById('file-input').click()">Upload Files</button>
+    </div>
+    <!-- Media Viewer -->
+    <div class="media-container">
+      <div id="media-viewer"></div>
+    </div>
+  </div>
+  <script src="pscript.js"></script>
+</body>
+</html>
